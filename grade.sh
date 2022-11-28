@@ -9,10 +9,12 @@ then
      echo "Found!"
 else
      echo "Wrong file!"
+     exit 1
 fi
 
+cd ..
 cp  *.java grade.sh  ./student-submission/
-cp -R lib ./student-submission/
+cp -r lib ./student-submission/
 cd student-submission
 
 javac -cp ".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar" *.java

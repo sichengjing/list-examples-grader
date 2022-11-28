@@ -4,12 +4,16 @@ set -e
 
 rm -rf student-submission
 git clone $1 student-submission
-if [-f "student-submission/ListExample.java"] 
-then exit
-else echo "Wrong file!"
+if [ -f "./student-submission/ListExamples.java" ]
+then 
+     echo "Found!"
+else
+     echo "Wrong file!"
 fi
 
-cp TestListExamples.java student-submission
+cp  *.java grade.sh  ./student-submission/
+cp -R lib ./student-submission/
 cd student-submission
-javac ListExample.java TestListExamples.java
-java ListExample TestListExamples
+
+javac -cp ".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar" *.java
+java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples

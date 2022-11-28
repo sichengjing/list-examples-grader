@@ -26,8 +26,7 @@ fi
 ![Image](1.png)
 ## Screenshot 2
 ![Image](2.png)
-## Screenshot 3
-![Image](3.png)
+
 
 ## Trace for Screenshot 2 (https://github.com/ucsd-cse15l-f22/list-methods-lab3)
 
